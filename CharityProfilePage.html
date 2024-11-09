@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub - Charity Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="CharitiesListPage.html">Charities List</a></li>
+            <li><a href="CharityProfilePage.html">Charity Profile</a></li>
+        </ul>
+    </nav>
+
+   <!-- Main Content -->
+<header>
+    <h1>Charity Name</h1>
+    <img src="charity_logo.jpg" alt="Charity Logo" width="200">
+</header>
+
+<!-- About This Charity Section -->
+<section class="about-charity">
+    <div class="left-box">
+        <img src="charity_photo.jpg" alt="Charity Photo" class="charity-photo">
+    </div>
+    <div class="right-box">
+        <h2>About This Charity</h2>
+        <p>Detailed description of the charity, its mission, and the work it does.</p>
+    </div>
+</section>
+
+<!-- Contact Information Section -->
+<section>
+    <h2>Contact Information</h2>
+    <p>Email: contact@charity.com</p>
+    <p>Phone: (123) 456-7890</p>
+</section>
+
+<!-- Get Involved Section -->
+<section>
+    <h2>Get Involved</h2>
+    <button id="volunteerBtn">Volunteer Now</button>
+</section>
+
+<!-- Volunteer Signup Section with Shadowed Outline Box -->
+<section class="volunteer-section">
+    <h2>Volunteer Signup</h2>
+    <p>If you're interested in making a difference, sign up to volunteer with us today!</p>
+    <button id="volunteerBtn">Sign Up to Volunteer</button>
+</section>
+
+<!-- Volunteer Form Modal -->
+<div id="volunteerModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Volunteer Signup</h2>
+        <form action="submit_volunteer" method="POST">
+            <label for="volunteer-name">Name:</label>
+            <input type="text" id="volunteer-name" name="name" required>
+
+            <label for="volunteer-email">Email:</label>
+            <input type="email" id="volunteer-email" name="email" required>
+
+            <label for="volunteer-phone">Phone Number:</label>
+            <input type="tel" id="volunteer-phone" name="phone" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 HelpHub. All rights reserved.</p>
+    <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

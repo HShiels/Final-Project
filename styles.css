@@ -1,0 +1,573 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation */
+nav {
+    background-color: #4CAF50;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+header p {
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Sections */
+section {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+}
+
+section h2 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+/* Button Styling */
+button {
+    margin-top: 15px;
+}
+
+#volunteerBtn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#volunteerBtn:hover {
+    background-color: #45a049;
+}
+
+/* Charity List */
+.charity-list p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.charity-list a {
+    text-decoration: none;
+    color: #333;
+}
+
+.charity-list a:hover {
+    color: #4CAF50;
+}
+
+/* Form Styling */
+form {
+    display: flex
+}
+
+/* Volunteer Section */
+section.volunteer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#volunteerBtn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+}
+
+#volunteerBtn:hover {
+    background-color: #45a049;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+form label, form input, form button {
+    width: 100%;
+    text-align: left;
+}
+
+form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    max-width: 150px;
+    text-align: center;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    max-width: 100%; /* Make container responsive */
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden; /* Hide overflow for better display */
+    border-radius: 8px; /* Rounded corners for the container */
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Placeholder Slide Images */
+.slides {
+    display: none;
+    width: 100%;
+    height: 300px; /* Placeholder height */
+    background-color: #e0e0e0; /* Light grey background for empty slides */
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+input#slide1:checked ~ .slides:nth-child(1),
+input#slide2:checked ~ .slides:nth-child(2),
+input#slide3:checked ~ .slides:nth-child(3) {
+    display: block;
+}
+
+/* Caption Styling */
+.caption {
+    color: #f2f2f2;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 8px 8px;
+}
+
+/* Controls Styling */
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prev, .next {
+    cursor: pointer;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .slide-image {
+        height: 250px; /* Adjust for smaller screens */
+    }
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation */
+nav {
+    background-color: #4CAF50;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+header p {
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Search Bar Container */
+.search-bar {
+    display: flex;
+    justify-content: center; /* Center the search bar horizontally */
+    width: 100%;              /* Ensure it takes the full width */
+    margin-top: 20px;         /* Add space from the top */
+    padding-bottom: 20px;     /* Optional: add space below */
+}
+
+/* Search Bar Input */
+.search-bar input {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px; /* Limit the width */
+    border: 2px solid #4CAF50; /* Thicker border */
+    border-radius: 12px; /* Rounder edges */
+    font-size: 1em;
+    outline: none; /* Removes default focus outline */
+    transition: border-color 0.3s ease; /* Smooth transition when focused */
+}
+
+/* Focused State */
+.search-bar input:focus {
+    border-color: #2d6930; /* Darker green when focused */
+}
+
+
+/* Focused State */
+.search-bar input:focus {
+    border-color: #2d6930; /* Darker green when focused */
+}
+
+/* All Charities Section */
+section h2 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+/* Charity Grid */
+.charity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    width: 90%;
+    max-width: 1200px; /* Optional max-width for better control */
+}
+
+.charity-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.charity-item:hover {
+    transform: translateY(-5px);
+}
+
+.charity-item h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.charity-item a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.charity-item a:hover {
+    color: #45a049;
+}
+
+.charity-item p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Button Styling */
+button {
+    margin-top: 15px;
+}
+
+#volunteerBtn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#volunteerBtn:hover {
+    background-color: #45a049;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+}
+
+/* Volunteer Section */
+section.volunteer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#volunteerBtn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+}
+
+#volunteerBtn:hover {
+    background-color: #45a049;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+form label, form input, form button {
+    width: 100%;
+    text-align: left;
+}
+
+form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    max-width: 150px;
+    text-align: center;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* About This Charity Section */
+.about-charity {
+    display: flex; /* Use flexbox for a row layout */
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Ensure content is spaced out between the columns */
+    gap: 20px; /* Space between the left and right boxes */
+    padding: 20px;
+}
+
+.left-box {
+    flex: 1; /* Allow the left box to take up available space */
+    max-width: 50%; /* Optional: limit the max width of the photo */
+}
+
+.right-box {
+    flex: 1; /* Allow the right box to take up available space */
+    max-width: 50%; /* Optional: limit the max width of the text */
+}
+
+.charity-photo {
+    width: 100%; /* Make the photo responsive to fill its container */
+    border-radius: 8px; /* Optional: rounded corners for the image */
+}
+
+.right-box h2 {
+    color: #4CAF50; /* Green for consistency */
+    margin-bottom: 15px;
+}
+
+.right-box p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+    margin-top: 20px; /* Adds space above the footer */
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Modal content margin adjustment */
+.modal-content {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px; /* Add space between footer and form modal */
+}
+
